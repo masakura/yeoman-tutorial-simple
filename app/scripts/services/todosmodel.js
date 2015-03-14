@@ -9,15 +9,16 @@
  */
 angular.module('yeomanTutorialSimpleApp')
   .factory('todosModel', function () {
-    // Service logic
-    // ...
+    var model = {};
 
-    var meaningOfLife = 42;
-
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
+    model.todos = [];
+    model.addTodo = function () {
+      model.todos.push(model.todo);
+      model.todo = '';
     };
+    model.removeTodo = function (index) {
+      model.todos.splice(index, 1);
+    };
+
+    return model;
   });
