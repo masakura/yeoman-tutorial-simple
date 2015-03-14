@@ -10,18 +10,6 @@
 angular.module('yeomanTutorialSimpleApp')
   .controller('MainCtrl', function ($scope, todosModel) {
     var model = todosModel;
-
-    /*
-    model.todos = [];
-    model.addTodo = function () {
-      model.todos.push(model.todo);
-      model.todo = '';
-    };
-    model.removeTodo = function (index) {
-      model.todos.splice(index, 1);
-    };
-    */
-
     $scope.model = model;
 
     $scope.addTodo = function () {
