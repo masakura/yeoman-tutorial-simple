@@ -9,6 +9,8 @@
  */
 angular.module('yeomanTutorialSimpleApp')
   .controller('MainCtrl', function ($scope) {
+    var model = {};
+
     $scope.todos = [];
     $scope.addTodo = function () {
       $scope.todos.push($scope.todo);
