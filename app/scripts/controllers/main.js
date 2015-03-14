@@ -8,7 +8,7 @@
  * Controller of the yeomanTutorialSimpleApp
  */
 angular.module('yeomanTutorialSimpleApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, todosModel) {
     var model = {};
 
     model.todos = [];
