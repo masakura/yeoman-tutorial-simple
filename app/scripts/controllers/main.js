@@ -9,8 +9,9 @@
  */
 angular.module('yeomanTutorialSimpleApp')
   .controller('MainCtrl', function ($scope, todosModel) {
-    var model = {};
+    var model = todosModel;
 
+    /*
     model.todos = [];
     model.addTodo = function () {
       model.todos.push(model.todo);
@@ -19,6 +20,7 @@ angular.module('yeomanTutorialSimpleApp')
     model.removeTodo = function (index) {
       model.todos.splice(index, 1);
     };
+    */
 
     $scope.model = model;
 
