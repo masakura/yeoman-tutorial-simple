@@ -20,6 +20,8 @@ angular.module('yeomanTutorialSimpleApp')
       model.todos.splice(index, 1);
     };
 
+    $scope.model = model;
+
     $scope.todos = [];
     $scope.addTodo = function () {
       $scope.todos.push($scope.todo);
