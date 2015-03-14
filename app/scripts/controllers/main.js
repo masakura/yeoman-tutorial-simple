@@ -11,13 +11,13 @@ angular.module('yeomanTutorialSimpleApp')
   .controller('MainCtrl', function ($scope) {
     var model = {};
 
-    $scope.todos = [];
-    $scope.addTodo = function () {
-      $scope.todos.push($scope.todo);
-      $scope.todo = '';
+    model.todos = [];
+    model.addTodo = function () {
+      model.todos.push(model.todo);
+      model.todo = '';
     };
-    $scope.removeTodo = function (index) {
-      $scope.todos.splice(index, 1);
+    model.removeTodo = function (index) {
+      model.todos.splice(index, 1);
     };
 
     $scope.todos = [];
