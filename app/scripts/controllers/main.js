@@ -22,12 +22,10 @@ angular.module('yeomanTutorialSimpleApp')
 
     $scope.model = model;
 
-    $scope.todos = [];
     $scope.addTodo = function () {
-      $scope.todos.push($scope.todo);
-      $scope.todo = '';
+      model.addTodo();
     };
     $scope.removeTodo = function (index) {
-      $scope.todos.splice(index, 1);
+      model.removeTodo(index);
     };
   });
