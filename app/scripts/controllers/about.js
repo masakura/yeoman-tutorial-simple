@@ -8,12 +8,8 @@
  * Controller of the yeomanTutorialSimpleApp
  */
 angular.module('yeomanTutorialSimpleApp')
-  .controller('AboutCtrl', function ($scope, todosModel) {
-    $scope.model = todosModel;
+  .controller('AboutCtrl', ['TodosFactory', function (TodosFactory) {
 
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    this.todos = TodosFactory.get().length;
+
+  }]);

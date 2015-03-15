@@ -8,14 +8,16 @@
  * Controller of the yeomanTutorialSimpleApp
  */
 angular.module('yeomanTutorialSimpleApp')
-  .controller('MainCtrl', function ($scope, todosModel) {
-    var model = todosModel;
-    $scope.model = model;
+  .controller('MainCtrl', ['TodosFactory', function (TodosFactory) {
 
-    $scope.addTodo = function () {
-      model.addTodo();
+    this.todos = TodosFactory.get();
+
+    this.addTodo = function(todo) {
+      TodosFactory.addTodo(todo);
+      this.todo = '';
     };
-    $scope.removeTodo = function (index) {
-      model.removeTodo(index);
+
+    this.removeTodo = function (index) {
+      TodosFactory.removeTodo(index);
     };
-  });
+  }]);

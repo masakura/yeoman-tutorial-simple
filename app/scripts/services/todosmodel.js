@@ -8,17 +8,22 @@
  * Factory in the yeomanTutorialSimpleApp.
  */
 angular.module('yeomanTutorialSimpleApp')
-  .factory('todosModel', function () {
+  .factory('TodosFactory', function () {
+
+    // モデルの初期化
     var model = {};
-
     model.todos = [];
-    model.addTodo = function () {
-      model.todos.push(model.todo);
-      model.todo = '';
-    };
-    model.removeTodo = function (index) {
-      model.todos.splice(index, 1);
-    };
 
-    return model;
+    // モデルに関するメソッド
+    return {
+      get: function () {
+        return model.todos;
+      },
+      addTodo: function (todo) {
+        model.todos.push(todo);
+      },
+      removeTodo: function (index) {
+        model.todos.splice(index, 1);
+      }
+    };
   });
