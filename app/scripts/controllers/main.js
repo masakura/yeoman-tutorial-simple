@@ -14,6 +14,7 @@ angular.module('yeomanTutorialSimpleApp')
 
     this.addTodo = function(todo) {
       TodosFactory.addTodo(todo);
+      this.todo = '';
     };
 
     this.removeTodo = function (index) {
