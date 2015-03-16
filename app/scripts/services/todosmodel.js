@@ -8,16 +8,16 @@
  * Factory in the yeomanTutorialSimpleApp.
  */
 angular.module('yeomanTutorialSimpleApp')
-  .factory('todosModel', function () {
+  .factory('todosModel', function (todoContainer) {
     var model = {};
 
-    model.todos = [];
+    model.todos = todoContainer.todos;
     model.addTodo = function () {
-      model.todos.push(model.todo);
+      todoContainer.addTodo(model.todo);
       model.todo = '';
     };
     model.removeTodo = function (index) {
-      model.todos.splice(index, 1);
+      todoContainer.removeTodo(index);
     };
 
     return model;
